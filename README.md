@@ -3,8 +3,8 @@
 The workshop site lives in `index.html`. It is hosted with GitHub Pages from the `main` branch,
 root folder.
 
-Repository: https://github.com/tx-learner26/CHI2027
-Live site: https://tx-learner26.github.io/CHI2027/
+Repository: https://github.com/Developmental-by-Design/chi2027
+Live site: https://developmental-by-design.github.io/chi2027/
 
 ## Turn on Pages (one time)
 
