@@ -58,22 +58,15 @@ img{max-width:100%;height:auto;display:block}
 .status{background:var(--paper-2);border-bottom:1px solid var(--rule);font-size:.92rem;color:var(--ink-soft)}
 .status .wrap{padding-top:.6rem;padding-bottom:.6rem}
 
-/* Hero: the two children */
-.hero{padding:4rem 0 3.5rem}
-.hero h1{font-size:clamp(2.5rem,6.4vw,4.6rem);letter-spacing:-.015em}
-.hero .tagline{font-family:Literata,Georgia,serif;font-size:clamp(1.25rem,2.4vw,1.7rem);margin:.5rem 0 0;max-width:30ch;line-height:1.3}
-.hero .sub{font-size:1.15rem;color:var(--ink-soft);max-width:38rem;margin-top:1.25rem}
-.tales{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.75rem}
-.tale{padding:2rem 2rem 2.25rem;color:var(--on-color);position:relative}
-.tale p{margin:0;font-size:1.05rem;line-height:1.55}
-.tale .who{font-family:Literata,Georgia,serif;font-size:1.3rem;font-weight:600;margin-bottom:.6rem}
-.tale.instead{background:var(--coral);clip-path:polygon(0 2%,12% 0,33% 1.5%,57% 0,80% 2%,100% .5%,99.2% 28%,100% 56%,99% 81%,100% 100%,74% 98%,47% 100%,21% 98.2%,0 100%,.8% 69%,0 40%)}
-.tale.toward{background:var(--blue);clip-path:polygon(.6% 0,25% 2%,50% 0,74% 1.6%,99.4% 0,100% 27%,99% 52%,100% 78%,99.4% 100%,76% 98%,50% 100%,27% 98.3%,0 99.5%,1% 74%,0 47%,.8% 22%)}
-.tale .out{display:block;margin-top:1.1rem;font-weight:600;font-size:.95rem;opacity:.95}
-.hero .line{font-family:Literata,Georgia,serif;font-size:1.35rem;margin-top:2.25rem;max-width:36rem}
-.meta{display:flex;flex-wrap:wrap;gap:.5rem 2rem;margin-top:1.75rem;color:var(--ink-soft);font-size:.98rem}
+/* Hero: title and abstract */
+.hero{padding:3rem 0 3rem}
+.hero h1{font-size:clamp(2rem,4.5vw,3rem);letter-spacing:-.01em}
+.hero .tagline{font-family:Literata,Georgia,serif;font-size:clamp(1.15rem,2vw,1.4rem);margin:.4rem 0 0;color:var(--ink-soft);line-height:1.3}
+.meta{display:flex;flex-wrap:wrap;gap:.5rem 2rem;margin-top:1.25rem;color:var(--ink-soft);font-size:.98rem}
 .meta strong{color:var(--ink);font-weight:600}
-@media (max-width:760px){.tales{grid-template-columns:1fr}.hero{padding-top:2.5rem}}
+.abstract{max-width:42rem;margin-top:2rem}
+.abstract h2{font-size:1.1rem;margin:0 0 .6rem}
+@media (max-width:760px){.hero{padding-top:2rem}}
 
 /* Sections */
 section{padding:4rem 0;border-top:1px solid var(--rule)}
@@ -147,12 +140,6 @@ summary{cursor:pointer;font-weight:600}
 
 footer{border-top:1px solid var(--rule);padding:2.5rem 0 3rem;color:var(--ink-soft);font-size:.92rem}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
-
-@media (prefers-reduced-motion:no-preference){
-  .tale{animation:settle .7s ease-out both}
-  .tale.toward{animation-delay:.15s}
-  @keyframes settle{from{opacity:0;transform:translateY(10px) rotate(-.6deg)}to{opacity:1;transform:none}}
-}
 </style>
 </head>
 <body>
@@ -182,27 +169,16 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
     <div class="wrap">
       <h1>Developmental by Design</h1>
       <p class="tagline">Bridging developmental science and the design of AI</p>
-      <p class="sub">A CHI 2027 workshop for people who build, research, or teach with AI that reaches learners. Bring one real project and leave knowing how it shapes the people who use it.</p>
-
-      <div class="tales">
-        <div class="tale instead">
-          <p class="who">A preschooler in a classroom</p>
-          <p>With supportive teachers all around, she plays with an AI teddy bear that always has an answer.</p>
-          <span class="out">She quietly loses chances to build relationships and practice social-emotional skills.</span>
-        </div>
-        <div class="tale toward">
-          <p class="who">A child walking alone into a refugee camp</p>
-          <p>Unable to speak the local language, they meet the same bear. It speaks their language.</p>
-          <span class="out">It helps them connect with adults and practice social-emotional skills.</span>
-        </div>
-      </div>
-
-      <p class="line">One tool, in two contexts, has different developmental impacts on children of the same age. How do we account for that complexity and risk when designing AI for learning across the lifespan?</p>
-
       <div class="meta">
         <span><strong>CHI 2027</strong>, Pittsburgh, PA, USA</span>
         <span><strong>Conference:</strong> May 10–14, 2027</span>
         <span><strong>Format:</strong> in person, two sessions</span>
+      </div>
+
+      <div class="abstract">
+        <h2>Abstract</h2>
+        <p>The same AI tool can have very different developmental effects on learners of the same age. An AI companion that answers every question may crowd out relationships for a preschooler surrounded by supportive teachers, yet help a child who does not speak the local language connect with the adults around them. HCI is practiced at asking whether AI systems are usable, trusted, or fair, but less practiced at asking whether using them leaves people more capable, or takes over the effort that would have made them so.</p>
+        <p>This workshop brings developmental science to the design and evaluation of AI for learning across the lifespan. Participants bring one real project and critique it with the Developmental by Design framework: a map with two axes, opportunities for effortful practice and movement toward relationships, plus six design practices used as critique lenses. Together we will build a shared vocabulary for the developmental impacts of generative AI and set a research agenda for designing technology that supports human development.</p>
       </div>
     </div>
   </div>
