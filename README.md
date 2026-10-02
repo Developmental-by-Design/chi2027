@@ -1,18 +1,16 @@
 # Developmental by Design — CHI 2027 Workshop website
 
-The workshop site lives in `index.html`. It is hosted with GitHub Pages on Harvard's GitHub
-(code.harvard.edu), from the `main` branch, root folder.
+The workshop site lives in `index.html`. It is hosted with GitHub Pages from the `main` branch,
+root folder.
 
-Repository: https://code.harvard.edu/bes521/chi2027
+Repository: https://github.com/tx-learner26/CHI2027
+Live site: https://tx-learner26.github.io/CHI2027/
 
 ## Turn on Pages (one time)
 
 Repository → *Settings* → *Pages*. Under *Build and deployment*, choose *Deploy from a branch*,
 branch `main`, folder `/ (root)`, and click *Save*. After a minute or two the Pages settings
 screen shows the live URL. That URL goes into the proposal's "Workshop website" field.
-
-Check that the URL opens in a private browser window where you are not signed in to Harvard.
-Reviewers and participants outside Harvard need to be able to see it.
 
 ## Updating the site later
 
