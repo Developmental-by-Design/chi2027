@@ -32,7 +32,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 I
 h1,h2,h3{font-family:Literata,Georgia,"Times New Roman",serif;font-weight:600;line-height:1.15;margin:0}
 p{margin:0 0 1em}
 a{color:var(--link);text-underline-offset:.18em}
-a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:2px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:2px}
 img{max-width:100%;height:auto;display:block}
 .wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
 .prose{max-width:40rem}
@@ -74,47 +74,18 @@ section h2{font-size:clamp(1.65rem,3.2vw,2.3rem);margin-bottom:1.25rem;max-width
 section h3{font-size:1.25rem;margin:2rem 0 .6rem}
 .lead{font-size:1.15rem}
 
-.depends{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem 2rem;margin:1.75rem 0 0;padding:0;list-style:none}
-.depends li{border-top:2px solid var(--ink);padding-top:.7rem}
-.depends b{display:block;font-family:Literata,Georgia,serif;font-size:1.1rem;margin-bottom:.2rem}
-@media (max-width:760px){.depends{grid-template-columns:1fr 1fr}}
-@media (max-width:480px){.depends{grid-template-columns:1fr}}
 
-.framework{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:3rem;align-items:start}
-.map{background:#FFFFFF;padding:1rem;border-radius:4px}
-.map figcaption{font-size:.88rem;color:#7A5E50;margin-top:.5rem;text-align:center}
-@media (max-width:860px){.framework{grid-template-columns:1fr}.map{max-width:30rem}}
 
-.practices{margin:0;padding:0;list-style:none}
-.practices li{display:grid;grid-template-columns:12rem 1fr;gap:1.25rem;padding:1.1rem 0;border-bottom:1px solid var(--rule)}
-.practices li:first-child{border-top:1px solid var(--rule)}
-.practices .name{font-family:Literata,Georgia,serif;font-weight:600;font-size:1.08rem;line-height:1.3}
-.practices .q{color:var(--ink-soft)}
-@media (max-width:600px){.practices li{grid-template-columns:1fr;gap:.25rem}}
 
-.goals{list-style:none;margin:1.5rem 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 3rem}
+.goals{list-style:none;margin:1.5rem 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0 2.5rem}
 .goal{display:grid;grid-template-columns:2.75rem 1fr;gap:1rem;padding:1.75rem 0;border-top:2px solid var(--ink)}
-.goal-1{grid-column:1 / -1}
 .goal .num{font-family:Literata,Georgia,serif;font-size:2.4rem;line-height:1;font-weight:600;color:var(--blue)}
 :root[data-theme="dark"] .goal .num{color:var(--link)}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .goal .num{color:var(--link)}}
 .goal h3{margin:.2rem 0 .6rem}
 .goal p{max-width:44rem}
-.questions{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem 2rem;margin-top:1.5rem}
-.questions > div{border-left:4px solid var(--mustard);padding-left:1rem}
-.questions .q2{border-color:var(--pink)}
-.questions .q3{border-color:var(--coral)}
-.questions h4{font-family:Literata,Georgia,serif;font-size:1.08rem;font-weight:600;margin:0 0 .4rem;line-height:1.3}
-.questions p{color:var(--ink-soft);font-size:.98rem;margin:0}
-@media (max-width:860px){.questions{grid-template-columns:1fr}.goals{grid-template-columns:1fr}}
+@media (max-width:860px){.goals{grid-template-columns:1fr}}
 
-.agenda{margin-top:1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
-.agenda h3{margin-top:0;font-size:1.1rem}
-.agenda ul{list-style:none;margin:0;padding:0}
-.agenda li{padding:.9rem 0;border-top:1px solid var(--rule)}
-.agenda b{display:block}
-.agenda span.d{color:var(--ink-soft);font-size:.97rem}
-@media (max-width:760px){.agenda{grid-template-columns:1fr}}
 
 .submit{background:var(--paper-2)}
 .cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:3rem}
@@ -133,10 +104,6 @@ section h3{font-size:1.25rem;margin:2rem 0 .6rem}
 .person p{font-size:1rem}
 @media (max-width:760px){.people{grid-template-columns:1fr}}
 
-details{margin-top:1rem;border-top:1px solid var(--rule);padding-top:1rem}
-summary{cursor:pointer;font-weight:600}
-.refs{font-size:.92rem;color:var(--ink-soft);padding-left:1.5rem}
-.refs li{margin-bottom:.5rem}
 
 footer{border-top:1px solid var(--rule);padding:2.5rem 0 3rem;color:var(--ink-soft);font-size:.92rem}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
@@ -150,11 +117,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
     <a class="brand" href="#top">Developmental by Design</a>
     <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav class="nav" id="nav" aria-label="Sections">
-      <a href="#question">The question</a>
-      <a href="#framework">Framework</a>
       <a href="#goals">Goals</a>
-      <a href="#format">Format</a>
-      <a href="#participate">Participate</a>
+      <a href="#participate">Call for participation</a>
       <a href="#organizers">Organizers</a>
     </nav>
   </div>
@@ -182,122 +146,32 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
     </div>
   </div>
 
-  <section id="question">
-    <div class="wrap">
-      <h2>Keep the loop human, then work out where AI fits</h2>
-      <div class="prose">
-        <p class="lead">We are practiced at asking whether an AI system is usable, trusted, fair, or harmful. We are much less practiced at asking whether using it leaves someone more capable than it found them, or takes over the work that would have made them so.</p>
-        <p>The standing advice is to keep a human in the loop, implying that the loop belongs to something else, and the person is a checkpoint trying to manage the system. We think it should be the other way around: keep the loop human, then work out where AI fits. That inversion is a design question before it is an ethical one, and it is the question this workshop is organized around.</p>
-        <p>It resists a yes-or-no answer. Whether a system grows a capacity or stands in for the effort that would have grown it depends on:</p>
-      </div>
-      <ul class="depends">
-        <li><b>For what</b>Which capacity, named narrowly enough to recognize it happening in front of you.</li>
-        <li><b>For whom</b>Which learner, and what they can already do without help.</li>
-        <li><b>When</b>Where they sit in their own development right now.</li>
-        <li><b>How</b>A hint or an answer, before their own attempt or after it, chosen or imposed.</li>
-        <li><b>In what context</b>The classroom, the home, the setting and what it already provides.</li>
-        <li><b>In place of what</b>What would have happened there without it.</li>
-      </ul>
-      <div class="prose" style="margin-top:2rem">
-        <p>Developmental science has well-replicated accounts of what is forming at a given point in life and what builds it: how early reading comes together, how metacognition is assembled from noticing one's own errors, how identity is worked out in adolescence, how expertise is built through repeated deliberate practice. Much of the research on AI and learning is a few years old, concentrated in a few settings and weighted toward adults. It rarely draws on developmental science, and developmental science rarely reaches the design decisions where it would change what gets built.</p>
-        <p>This is a gap between two literatures and between research and practice. CHI 2027's theme of bridges names these divides, and this workshop is interdisciplinary in the strict sense: it cannot be done by developmental scientists or by system designers alone.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="framework">
-    <div class="wrap">
-      <h2>The framework: one map, six practices</h2>
-      <div class="framework">
-        <figure class="map" style="margin:0">
-          <img src="assets/framework-map.jpg" width="900" height="837" alt="The Developmental by Design map. The horizontal axis runs from fewer to more opportunities for effortful practice. The vertical axis runs from instead of relationships to towards relationships. Arrows move out of the lower-left quadrant, marked From, toward the upper right.">
-          <figcaption>The Developmental by Design map</figcaption>
-        </figure>
-        <div>
-          <p>Something is better for human development when it gives people opportunities for effortful practice of what they are developing, and moves them toward other people rather than taking their place. Those are the map's two axes.</p>
-          <p>You place a learner where they are today, then again where they would be with the design in place. The map shows the change a design makes, not the design on its own. The top right is the development zone; any intentional move toward it is being developmental by design.</p>
-          <p>The framework comes out of the Compass Collaborative at the Harvard Graduate School of Education. Six design practices underpin the map. A practice is something you get better at rather than something you finish, and we believe these six belong in the toolkit of anyone designing or governing AI. In this workshop, each becomes a critique lens: a question to ask of a design.</p>
-        </div>
-      </div>
-
-      <h3>The six design practices</h3>
-      <ul class="practices">
-        <li><span class="name">Design in particulars</span><span class="q">For what, for whom, when, how, in what context, and in place of what?</span></li>
-        <li><span class="name">Protect the struggle</span><span class="q">Where is the hard part where the learning happens, and how much of it stays with the learner? Where does their own attempt belong?</span></li>
-        <li><span class="name">See what AI makes possible</span><span class="q">Which separate things does AI offer here — instant answers, endless variation, patience, holding a role, arguing a side, patterns across more work than a person could read — and what could each make possible for this learner?</span></li>
-        <li><span class="name">Design toward relationships</span><span class="q">Where does this send the learner back to a teacher, a peer, a parent? Who hears their questions now?</span></li>
-        <li><span class="name">Look without the tool</span><span class="q">How does this work happen today, how do learners here get good at it, and what can they do when the design is switched off?</span></li>
-        <li><span class="name">Notice what isn't there</span><span class="q">What work has the design taken over, who used to learn on that work, and who else does the change reach two or three steps out?</span></li>
-      </ul>
-    </div>
-  </section>
-
   <section id="goals">
     <div class="wrap">
       <h2>Three goals for the workshop</h2>
       <ol class="goals">
-        <li class="goal goal-1">
+        <li class="goal">
           <span class="num">1</span>
           <div>
-            <h3>Bridge HCI and the developmental sciences</h3>
-            <p>Apply a developmental lens to designing and evaluating AI. The opportunities and challenges of AI can only be understood through multidisciplinary research and connections between research and practice. The framework is an entry point for three big questions:</p>
-            <div class="questions">
-              <div class="q1">
-                <h4>Capacity or substitution</h4>
-                <p>When does AI assistance build the capacity it touches, and when does it stand in for the effort that would have built it?</p>
-              </div>
-              <div class="q2">
-                <h4>The same tool, different developing minds</h4>
-                <p>How should a design change for a five-year-old, a fifteen-year-old, a new employee, or an expert? What does a system need to know about where someone is in their development, and what should it do with that knowledge?</p>
-              </div>
-              <div class="q3">
-                <h4>Toward people, not in their place</h4>
-                <p>When should a system hand someone back to a teacher, a peer, a parent or a colleague? How do emerging workers build expertise and the pattern recognition needed when the foundational work that built it is disappearing?</p>
-              </div>
-            </div>
+            <h3>Bring a developmental lens to HCI</h3>
+            <p>Connect developmental and learning science to the design and evaluation of AI, using the Developmental by Design map and six design practices to critique real projects.</p>
           </div>
         </li>
         <li class="goal">
           <span class="num">2</span>
           <div>
             <h3>Build a shared vocabulary</h3>
-            <p>Through this exploration and dialogue, build and test a shared vocabulary for evaluating the developmental impacts of generative AI, so that design critique can go further than "be careful with AI."</p>
+            <p>Build and test a shared vocabulary for judging the developmental impact of generative AI, so design critique can go further than "be careful with AI."</p>
           </div>
         </li>
         <li class="goal">
           <span class="num">3</span>
           <div>
             <h3>Set a research agenda</h3>
-            <p>Identify a research agenda that prioritizes big questions surfaced by participants who are committed to shaping technology to support human development, and push this field forward.</p>
+            <p>Leave with a research agenda the room has written, built from the big questions participants bring.</p>
           </div>
         </li>
       </ol>
-    </div>
-  </section>
-
-  <section id="format">
-    <div class="wrap">
-      <h2>Format: two sessions, one real project</h2>
-      <div class="prose">
-        <p>In person, as two sessions of 75–90 minutes each, with one break in between.</p>
-      </div>
-      <div class="agenda">
-        <div>
-          <h3>Session 1</h3>
-          <ul>
-            <li><b>Developmental by Design introduction</b><span class="d">The map and six design practices, tried out in small groups on a real system.</span></li>
-            <li><b>Real-world application</b><span class="d">Define your audience and developmental goals, place your design on the map, and find what would move it toward development.</span></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Session 2</h3>
-          <ul>
-            <li><b>Collaborative critique</b><span class="d">In groups mixed across sectors, critique each other's projects using the map and practices.</span></li>
-            <li><b>Redesign commitment</b><span class="d">Write the one change you will make to your project.</span></li>
-            <li><b>Reflection and future research</b><span class="d">Where the framework helped, where it broke down, and the big questions still open.</span></li>
-          </ul>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -306,26 +180,25 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
       <h2>Call for participation</h2>
       <div class="cols">
         <div>
-          <h3 style="margin-top:0">Who should join</h3>
-          <p>Designers, engineers, researchers, educators, and learning and policy leaders who are building, studying or teaching with AI that reaches learners — from early childhood through higher education and the workplace. Any career stage is welcome. No background in developmental science is needed, and work in progress is encouraged.</p>
+          <h3 style="margin-top:0">The workshop</h3>
+          <p>This in-person workshop runs as two back-to-back sessions of 75–90 minutes. We introduce Developmental by Design, a two-axis map and six design practices from developmental and learning science. Participants evaluate a real system with it, use it to define their audiences and developmental objectives, then critique each other's projects in small groups.</p>
+
+          <h3>Who should join</h3>
+          <p>Designers, engineers, researchers, educators, and policy leaders working on AI that reaches learners, from early childhood to the workplace. All career stages are welcome. No developmental science background is needed, and work in progress is encouraged.</p>
 
           <h3>What to submit</h3>
-          <p>A 2–4 page position paper on one AI product, lesson, research intervention or policy you are working on. Use the <a href="https://www.acm.org/publications/proceedings-template">single-column ACM template</a>. Papers are not anonymized.</p>
+          <p>A 2–4 page position paper on one project, product, lesson, intervention, or policy, in the <a href="https://www.acm.org/publications/proceedings-template">single-column ACM template</a>. Papers are not anonymized.</p>
 
-          <h3>After acceptance</h3>
-          <p>We'll group accepted participants by learner age group and share each group's one-page overviews before the workshop. One author of each accepted paper must attend in person.</p>
-
-          <h3>Publishing</h3>
-          <p>Accepted papers are non-archival and will be posted on this website. Afterward, we will publish a synthesis of the workshop's contributions on CEUR-WS or arXiv.</p>
+          <h3>Attendance and publishing</h3>
+          <p>We expect 20–40 participants. Authors of accepted papers are prioritized for places; remaining seats are open to any registered CHI attendee. One author of each accepted paper must register and attend. Papers are non-archival and will be posted on this website; a synthesis will follow on arXiv.</p>
         </div>
         <div>
           <h3 style="margin-top:0">Submit your paper</h3>
           <a class="cta" id="submit-link" href="#participate" aria-disabled="true">Submission opens after acceptance</a>
-          <p class="note">We expect 20–40 participants.</p>
 
           <h3>Key dates</h3>
           <table class="dates">
-            <tr><th scope="row">Submission deadline</th><td>To be announced</td></tr>
+            <tr><th scope="row">Submission deadline</th><td>February 11, 2027</td></tr>
             <tr><th scope="row">Notification</th><td>To be announced</td></tr>
             <tr><th scope="row">Workshop day</th><td>To be announced, during CHI 2027</td></tr>
             <tr><th scope="row">CHI 2027</th><td>May 10–14, 2027, Pittsburgh</td></tr>
@@ -340,7 +213,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
     <div class="wrap">
       <h2>Organizers</h2>
       <div class="prose">
-        <p>Both organizers work at the Compass Collaborative at the Harvard Graduate School of Education, where Developmental by Design was developed and taught. Both will attend in person, review submissions, and facilitate and document the discussions.</p>
+        <p>Both organizers work at the Compass Collaborative at the Harvard Graduate School of Education, where Developmental by Design was developed and taught.</p>
       </div>
       <div class="people">
         <div class="person">
@@ -355,32 +228,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
         </div>
       </div>
 
-      <div class="prose" style="margin-top:2.5rem">
+      <div class="prose" style="margin-top:2rem">
         <p>Questions? Email <a href="mailto:bethsapire@gse.harvard.edu">bethsapire@gse.harvard.edu</a> or <a href="mailto:tforshaw@g.harvard.edu">tforshaw@g.harvard.edu</a>.</p>
       </div>
-
-      <details>
-        <summary>References</summary>
-        <ol class="refs">
-          <li>Bjork, R. A., &amp; Bjork, E. L. (2011). Making things hard on yourself, but in a good way: Creating desirable difficulties to enhance learning.</li>
-          <li>Bronfenbrenner, U. (1979). <i>The Ecology of Human Development.</i></li>
-          <li>Buçinca, Z., Malaya, M. B., &amp; Gajos, K. Z. (2021). To trust or to think: Cognitive forcing functions can reduce overreliance on AI.</li>
-          <li>Chi, M. T. H., &amp; Wylie, R. (2014). The ICAP framework.</li>
-          <li>Collins, A., Brown, J. S., &amp; Newman, S. E. (1989). Cognitive apprenticeship.</li>
-          <li>Ehri, L. C. (1995). Phases of development in learning to read words by sight.</li>
-          <li>Ericsson, K. A., Krampe, R. T., &amp; Tesch-Römer, C. (1993). The role of deliberate practice in the acquisition of expert performance.</li>
-          <li>Flavell, J. H. (1979). Metacognition and cognitive monitoring.</li>
-          <li>Friedman, B., Kahn, P. H., &amp; Borning, A. (2006). Value sensitive design and information systems.</li>
-          <li>Hirsh-Pasek, K., et al. (2015). Putting education in "educational" apps.</li>
-          <li>Lave, J., &amp; Wenger, E. (1991). <i>Situated Learning.</i></li>
-          <li>Marcia, J. E. (1966). Development and validation of ego-identity status.</li>
-          <li>Risko, E. F., &amp; Gilbert, S. J. (2016). Cognitive offloading.</li>
-          <li>Vygotsky, L. S. (1978). <i>Mind in Society.</i></li>
-          <li>Vereschak, O., Bailly, G., &amp; Caramiaux, B. (2021). How to evaluate trust in AI-assisted decision making? A survey of empirical methodologies.</li>
-          <li>Shelby, R., et al. (2023). Sociotechnical harms of algorithmic systems: Scoping a taxonomy for harm reduction.</li>
-          <li>Shneiderman, B. (2020). Human-centered artificial intelligence: Reliable, safe &amp; trustworthy.</li>
-        </ol>
-      </details>
     </div>
   </section>
 </main>
